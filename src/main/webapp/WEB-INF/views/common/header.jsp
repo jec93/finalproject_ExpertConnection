@@ -43,6 +43,7 @@
 	            <c:when test="${empty sessionScope.loginMember}">
 	            
 	                    <li><a href="/member/loginFrm.exco" class="login">로그인</a></li>
+<<<<<<< HEAD
 	                    <li><a href="/member/joinFrm">회원가입</a></li>
 	                    <li class="login_box">
 		                    <a href="/member/loginFrm.exco"><img id="icon_login" src="/resources/images/icon_login.png">로그인</a>
@@ -51,6 +52,9 @@
                     		<a href="/user/joinFrm.exco"><img id="icon_signup" src="/resources/images/icon_signup_01.png">회원가입</a>
 	                    </li>
 
+=======
+	                    <li><a href="/member/joinFrm.exco">회원가입</a></li>
+>>>>>>> dev
 	            </c:when>
 	            <c:otherwise>
 	                     <li class="chat_box">

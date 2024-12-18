@@ -20,7 +20,7 @@
 }
 
 .input-password{
-	width : 308px;
+	width : 305px;
 	height : 40px;
 	margin-top : 10px;
 	border-radius : 5px;
@@ -30,7 +30,7 @@
 	width : 300px;
 	height : 30px;
 	border-radius : 5px;
-	margin-bottom : 5px;
+
 }
 .member-link-box{
 	margin-left : 15px;
@@ -95,7 +95,6 @@ input[type="checkbox"] {
 		<section class="section login-wrap">
 			<c:if test="${empty loginMember}">
 				<form action="/member/login.exco" method="post">
-				
 					<div class="input-title">
 							<label for="loginId">아이디</label>
 					</div> <div class="input-wrap checkbox-container">
@@ -114,22 +113,21 @@ input[type="checkbox"] {
 							<label for="loginPw">비밀번호</label>
 					</div> <br> 
 						<input class="input-item" type="password" name="memberPw"> <br>
-						
-					
 					<input class="input-password" type="submit" value="로그인"> <br>
+					
 					<div class="member-link-box">
 						<a href="javascript:void(0)" onclick="showIdSearchPopup()" class="search">아이디 찾기</a> | 
 						<a href="javascript:void(0)" onclick="showPwSearchPopup()" class="search">비밀번호 찾기</a> | 
-						<a href="/member/joinFrm.kh" class="join">회원가입</a>
+						<a href="/member/joinFrm.exco">회원가입</a>
 					</div>
 				</form>
 			</c:if>
 			
 			<c:if test="${not empty loginMember}">
 				<h3>[${loginMember.memberNickname}]님 환영합니다!</h3>
-				<a href="/member/logout.kh">로그아웃</a>
-				<a href="/member/delete.kh?memberId=${loginMember.memberId}">회원탈퇴</a>
-				<a href="/member/mypage.kh">마이페이지</a>
+				<a href="/member/logout.exco">로그아웃</a>
+				<a href="/member/delete.exco?memberId=${loginMember.memberId}">회원탈퇴</a>
+				<a href="/member/mypage.exco">마이페이지</a>
 			</c:if>
 		</section>
 	</main>
