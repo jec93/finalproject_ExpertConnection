@@ -13,7 +13,7 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>characterEncoding</filter-name> <!-- 위 filter-name과 일치 시켜야 함 -->
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.exco</url-pattern>
 	</filter-mapping>
 	
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
@@ -45,6 +45,6 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.exco</url-pattern>
 	</servlet-mapping>
 </web-app>
