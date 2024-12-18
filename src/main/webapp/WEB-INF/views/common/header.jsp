@@ -13,6 +13,9 @@
   .user-menu {
     display: none;
   }
+}
+.login{
+	padding-right : 10px;
 } 
 </style>
 
@@ -34,11 +37,11 @@
 	               <li><a href="#">카테고리</a></li>
 	            </ul>
 	        </nav>
-	        <ul class="user-menu">
+	        <ul class="member-menu">
 	            <c:choose>
-	            <c:when test="${empty sessionScope.loginUser}">
-	                    <li><a href="/user/loginFrm">로그인</a></li>
-	                    <li><a href="/user/joinFrm">회원가입</a></li>
+	            <c:when test="${empty sessionScope.loginMember}">
+	                    <li><a href="/member/loginFrm.exco" class="login">로그인</a></li>
+	                    <li><a href="/member/joinFrm">회원가입</a></li>
 	            </c:when>
 	            <c:otherwise>
 	                    <li>채팅</li> <span> | </span>

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import kr.or.iei.member.model.service.MemberService;
 import kr.or.iei.member.model.vo.Member;
-import kr.or.iei.member.service.MemberService;
 
 @Controller
 @RequestMapping("/member/")
@@ -40,6 +40,11 @@ public class MemberController {
 		session.invalidate();
 		
 		return "redirect:/";
+	}
+	
+	@GetMapping("loginFrm.exco")
+	public String loginFrm() {
+		return "member/login";
 	}
 	
 	@GetMapping("joinFrm.exco")
