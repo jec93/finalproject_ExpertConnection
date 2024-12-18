@@ -39,19 +39,18 @@
 	        </nav>
 	        <ul class="member-menu">
 	            <c:choose>
-<<<<<<< HEAD
+
 	            <c:when test="${empty sessionScope.loginMember}">
+	            
 	                    <li><a href="/member/loginFrm.exco" class="login">로그인</a></li>
 	                    <li><a href="/member/joinFrm">회원가입</a></li>
-=======
-	            <c:when test="${empty sessionScope.loginUser}">
 	                    <li class="login_box">
 		                    <a href="/member/loginFrm.exco"><img id="icon_login" src="/resources/images/icon_login.png">로그인</a>
 		                </li>
 	                    <li class="signup_box">
                     		<a href="/user/joinFrm.exco"><img id="icon_signup" src="/resources/images/icon_signup_01.png">회원가입</a>
 	                    </li>
->>>>>>> 8fdc2bcb24c186f6089725ec15c105442fc36d16
+
 	            </c:when>
 	            <c:otherwise>
 	                     <li class="chat_box">
