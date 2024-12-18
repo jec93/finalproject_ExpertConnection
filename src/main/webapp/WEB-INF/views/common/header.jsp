@@ -39,15 +39,33 @@
 	        </nav>
 	        <ul class="member-menu">
 	            <c:choose>
+<<<<<<< HEAD
 	            <c:when test="${empty sessionScope.loginMember}">
 	                    <li><a href="/member/loginFrm.exco" class="login">로그인</a></li>
 	                    <li><a href="/member/joinFrm">회원가입</a></li>
+=======
+	            <c:when test="${empty sessionScope.loginUser}">
+	                    <li class="login_box">
+		                    <a href="/member/loginFrm.exco"><img id="icon_login" src="/resources/images/icon_login.png">로그인</a>
+		                </li>
+	                    <li class="signup_box">
+                    		<a href="/user/joinFrm.exco"><img id="icon_signup" src="/resources/images/icon_signup_01.png">회원가입</a>
+	                    </li>
+>>>>>>> 8fdc2bcb24c186f6089725ec15c105442fc36d16
 	            </c:when>
 	            <c:otherwise>
-	                    <li>채팅</li> <span> | </span>
-	                    <li>알림</li> <span> | </span>
-	                    <li>마이페이지</li> <span> | </span>
-	                    <li>로그아웃</li>
+	                     <li class="chat_box">
+		                    <a href="/member/loginFrm.exco"><img id="icon_chat" src="/resources/images/icon_chat.png">채팅</a>
+		                </li>
+	                    <li class="alarm_box">
+                    		<a href="/user/joinFrm.exco"><img id="icon_alarm" src="/resources/images/icon_alarm.png">알람</a>
+	                    </li>
+	                    <li class="mypage_box">
+		                    <a href="/member/loginFrm.exco"><img id="icon_mypage" src="/resources/images/icon_mypage.png">마이페이지</a>
+		                </li>
+	                    <li class="logout_box">
+                    		<a href="/user/joinFrm.exco"><img id="icon_logout" src="/resources/images/icon_logout.png">로그아웃</a>
+	                    </li>
 	            </c:otherwise>
 	            </c:choose>
 	        </ul>
