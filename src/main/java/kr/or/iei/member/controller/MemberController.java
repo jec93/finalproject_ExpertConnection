@@ -5,9 +5,12 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.or.iei.member.model.service.MemberService;
@@ -23,17 +26,17 @@ public class MemberController {
 	
 	@PostMapping("login.exco")
 	public String memberLogin(Member member, HttpSession session) {
-		
 		Member loginMember = memberService.memberLogin(member);
 		
 		if(loginMember != null) {
 			session.setAttribute("loginMember", loginMember);
 			return "redirect:/";
 		}else {
-			return "member/loginFail.jsp";
+			return "member/loginFail";
 		}
 
 	}
+	
 	
 	@GetMapping("logout.exco")
 	public String logout(HttpSession session) {
@@ -73,5 +76,7 @@ public class MemberController {
 		return String.valueOf(cnt);				
 	}
 	
-	
+
 }
+	
+

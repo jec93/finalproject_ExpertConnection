@@ -41,7 +41,7 @@
 	            <c:choose>
 	            <c:when test="${empty sessionScope.loginMember}">
 	                    <li><a href="/member/loginFrm.exco" class="login">로그인</a></li>
-	                    <li><a href="/member/joinFrm">회원가입</a></li>
+	                    <li><a href="/member/joinFrm.exco">회원가입</a></li>
 	            </c:when>
 	            <c:otherwise>
 	                    <li>채팅</li> <span> | </span>

@@ -14,6 +14,7 @@ public class MemberService {
 	@Qualifier("dao")
 	private MemberDao memberDao;
 	
+	
 	public Member memberLogin(Member member) {
 		return memberDao.memberLogin(member);
 	}
