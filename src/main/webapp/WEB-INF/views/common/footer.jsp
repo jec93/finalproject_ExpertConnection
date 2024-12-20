@@ -16,7 +16,7 @@
 	</div>
 	<div class="pageBrife">
 		<a href="/cs/siteIntro.exco">사이트 소개</a> <span>|</span> 
-		<a href="/cs/siteUsePolicy.exco">이용약관</a> <span>|</span>
+		<a href="/cs/siteTermsOfUse.exco">이용약관</a> <span>|</span>
 		<a href="/cs/personalInfoPolicy.exco">개인정보처리방침</a> <span>|</span>
 		<a href="/cs/CS.exco">고객센터</a>
 	</div>

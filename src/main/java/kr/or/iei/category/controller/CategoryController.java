@@ -33,8 +33,8 @@ public class CategoryController {
         firstCategoriesCache = categoryService.getFirstCategories(); // 대분류 데이터를 DB에서 조회하여 캐싱
     }
 
-    @GetMapping("/moveCategory")
-    public String moveCategory() {
+    @GetMapping("/categoryFrm.exco")
+    public String categoryFrm() {
     	return"categories/categorySelect";
     }
     

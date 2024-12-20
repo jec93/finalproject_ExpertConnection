@@ -22,7 +22,7 @@
     </select>
 
     <!-- 중분류 및 소분류 조회 -->
-    <select id="selectSubCategories" resultType="map">
+    <select id="selectSubCategories" parameterType="string" resultType="map">
         SELECT second_category_cd AS secondCode, second_category_nm AS secondName,
                third_category_cd AS thirdCode, third_category_nm AS thirdName
         FROM tbl_code
